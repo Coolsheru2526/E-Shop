@@ -124,6 +124,7 @@ const AddProductForm = () => {
     axios.post('/api/product',productData).then(()=>{
         toast.success('Product Created');
         setIsProductCreated(true);
+        setIsLoading(false);
         router.refresh();
     }).catch(error =>{
         console.log('Error Handling image upload');

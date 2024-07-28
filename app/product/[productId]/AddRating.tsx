@@ -38,6 +38,7 @@ const AddRating:FC<AddRatingProps> = ({product,user}) => {
         })
     }
     const onSubmit:SubmitHandler<FieldValues> = async(data)=>{
+        console.log(data);
         setIsLoading(true);
         if(data.rating === 0){
             setIsLoading(false);
@@ -56,15 +57,18 @@ const AddRating:FC<AddRatingProps> = ({product,user}) => {
             setIsLoading(false);
         })
     }
+    if(!user || !product) return null;
+
     const deliveredOrder = user?.orders.some(order => order.products.find(item=> 
         item.id === product.id)&&(order.deliveryStatus==='delivered'))
+
     const userReview = product?.reviews.find(((review:Review)=>{
             return review.userId===user?.id;
         }))
 
-    // if(userReview||!deliveredOrder){
-    //     return null;
-    // }
+    if(userReview||!deliveredOrder){
+        return null;
+    }
     return (
         <div className="flex flex-col gap-2 max-w-[500px]">
             <Heading title="Rate this Product"/>
