@@ -65,6 +65,8 @@ To get started with E-Shop, follow these steps:
 
 We welcome contributions to E-Shop! If you'd like to contribute, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
+### DEMO LINK:- https://drive.google.com/file/d/1vHQ2CkUshGLx01E7b4RuEHRWBl2mTHH1/view?usp=sharing
+
 ## Contact
 
 For any questions or suggestions, please contact us at [shreyanshmishra.4365@gmail.com].
